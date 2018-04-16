@@ -1,1 +1,9 @@
-<h2>Buy More Scrunchies <a href="/products/new">(+)</a></h2>
+<h2>Buy More Scrunchies <%= link_to "(+)", new_product_path %></h2>
+
+<ul>
+  <% @products.each do |product| %>
+    <li>
+      <%= link_to "#{product.website_url} - #{product.cost}, #{product.brand}" %>
+    </li>
+  <% end %>
+</ul>

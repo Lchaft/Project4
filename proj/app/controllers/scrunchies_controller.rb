@@ -28,7 +28,7 @@ class ScrunchiesController < ApplicationController
 
     def destory 
     @scrunchie = Scrunchie.find(params[:id])
-    @post.destory
+    @scrunchie.destory
     redirect_to scrunchie_path
     end 
   end
