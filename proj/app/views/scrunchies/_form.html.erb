@@ -1,0 +1,12 @@
+<%= form_for @scrunchie do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :website_url %>
+  <%= f.text_field :website_url %>
+
+  <%= f.label :date %>
+  <%= f.text_field :date %>
+
+  <%= f.submit "Create" %>
+<% end %>
