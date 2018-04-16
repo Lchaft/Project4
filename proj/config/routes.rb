@@ -6,7 +6,7 @@
 
 Rails.application.routes.draw do
   root "scrunchies#index"
-  resources :scrunchies do 
+  resources :scrunchies 
   resources :moods
-end
+  resources :products 
 end 
