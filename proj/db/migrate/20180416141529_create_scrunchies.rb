@@ -4,6 +4,7 @@ class CreateScrunchies < ActiveRecord::Migration[5.1]
       t.string :title
       t.string :website_url
       t.string :date
+      t.string :image_url
     end
   end
 end

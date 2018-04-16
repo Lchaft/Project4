@@ -10,18 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180416141925) do
+ActiveRecord::Schema.define(version: 20180416163936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "moods", force: :cascade do |t|
+    t.string "image_url"
+    t.string "source"
+    t.bigint "scrunchie_id"
+    t.index ["scrunchie_id"], name: "index_moods_on_scrunchie_id"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "website_url"
+    t.string "cost"
+    t.string "brand"
+    t.bigint "scrunchie_id"
+    t.index ["scrunchie_id"], name: "index_products_on_scrunchie_id"
   end
 
   create_table "scrunchies", force: :cascade do |t|
     t.string "title"
     t.string "website_url"
     t.string "date"
+    t.string "image_url"
   end
 
+  add_foreign_key "moods", "scrunchies", column: "scrunchie_id"
+  add_foreign_key "products", "scrunchies", column: "scrunchie_id"
 end

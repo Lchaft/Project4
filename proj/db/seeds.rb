@@ -8,11 +8,14 @@
 
 require_relative './scrunchie_data.rb'
 require_relative './mood_data.rb'
+require_relative './product_data.rb'
 
 Scrunchie.destroy_all
 Mood.destroy_all
+Product.destroy_all
 
 scrunchie_data = get_scrunchie_data()
 mood_data = get_mood_data()
+product_data = get_product_data()
 
 
