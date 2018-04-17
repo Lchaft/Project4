@@ -1,9 +1,11 @@
 <h2>Buy More Scrunchies <%= link_to "(+)", new_product_path %></h2>
 
-<ul>
-  <% @products.each do |product| %>
-    <li>
-      <%= link_to "#{product.website_url} - #{product.cost}, #{product.brand}" %>
-    </li>
+
+<% @products.each do |product| %>
+      <h3>
+      
+      <%= link_to product.brand, product_path(product) %>  <%= link_to "(edit)", edit_product_path(product) %></h3> 
+      <p><%= link_to 'Delete Scrunchie', product_path(product),
+              method: :delete,
+              data: { confirm: 'You dare delete this scrunchie?' } %></p>
   <% end %>
-</ul>

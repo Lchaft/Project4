@@ -17,18 +17,32 @@ class ScrunchiesController < ApplicationController
     end 
 
     def create 
-    @scrunchie = Scrunchie.create 
-    redirect_to scrunchy_path(@scrunchie_id)
+    @scrunchie = Scrunchie.create!(scrunchie_params) 
+    redirect_to @scrunchie
+    # redirect_to scrunchy_path(@scrunchie_id)
     end 
 
     def update 
     @scrunchie = Scrunchie.find(params[:id])
-    redirect_to scrunchie_path(@scrunchie)
+    if @scrunchie.update(scrunchie_params)
+        flash[:notice] = "#{@scrunchie} was updated"
+        redirect_to @scrunchie
+    else 
+        render :edit
+    # redirect_to scrunchy_path(@scrunchie)
     end 
+end 
 
     def destory 
     @scrunchie = Scrunchie.find(params[:id])
     @scrunchie.destory
-    redirect_to scrunchie_path
+    redirect_to scrunchy_path
     end 
+
+    private 
+    def scrunchie_params 
+        params.require(:scrunchie).permit(:title)
+    end 
+
+
   end

@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
 
     def destory 
     @product = Product.find(params[:id])
-    @scrunchie.destory
+    @product.destory
     redirect_to product_path
     end 
   end
