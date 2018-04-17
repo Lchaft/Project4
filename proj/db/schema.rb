@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20180416163936) do
   enable_extension "plpgsql"
 
   create_table "moods", force: :cascade do |t|
-    t.string "image_url"
-    t.string "source"
+    t.string "website_url"
+    t.string "title"
     t.bigint "scrunchie_id"
     t.index ["scrunchie_id"], name: "index_moods_on_scrunchie_id"
   end

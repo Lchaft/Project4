@@ -1,6 +1,6 @@
 def get_scrunchie_data 
     scrunchie_data = {
-        "The Cut" => {
+        "What 9 Women Think of the New Fancy Scrunchies" => {
             title: "What 9 Women Think of the New Fancy Scrunchies",
             website_url: "https://www.thecut.com/2018/04/best-fancy-scrunchies-balenciaga-scrunchie-review.html", 
             date: "APRIL 10, 2018",

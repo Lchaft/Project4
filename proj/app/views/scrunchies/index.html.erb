@@ -1,12 +1,10 @@
-<h2>Scrunchies <a href="/scrunchies/new">(+)</a></h2>
+<h2>Scrunchie Articles</h2>
 
+  <h2>Add New Scrunchie Post <%= link_to "(+)", new_scrunchy_path %></h2>
 
-<%= image_tag "runwayscrunchies.jpg"%>
-<%= image_tag "scrunchiehilary.jpg" %>
-<%= image_tag "scrunchieblue.jpg" %>
-<%= image_tag "scrunchieorange.jpg" %>
-<%= image_tag "scrunchiemodels.jpg" %>
-<%= image_tag "scrunchieswhite.jpg" %>
-<%= image_tag "scrunchiejlo.jpg" %>
-<%= image_tag "scrunchieblack.jpg" %>
-<%= image_tag "scrunchieweird.jpg" %>
+  <% @scrunchies.each do |scrunchie| %>
+      <h3><%= link_to scrunchie.title, scrunchy_path(scrunchie) %>  <%= link_to "(edit)", edit_scrunchy_path(scrunchie) %></h3> 
+      <p><%= link_to 'Delete Scrunchie', scrunchy_path(scrunchie),
+              method: :delete,
+              data: { confirm: 'You dare delete this scrunchie?' } %></p>
+  <% end %>

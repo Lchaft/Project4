@@ -18,4 +18,11 @@ scrunchie_data = get_scrunchie_data()
 mood_data = get_mood_data()
 product_data = get_product_data()
 
+scrunchie_data.each do |scrunchie|
+    Scrunchie.create!({
+      title:        scrunchie[:title],
+      date:         scrunchie[:date],
+      website_url:  scrunchie[:website_url],
+    })
+  end
 

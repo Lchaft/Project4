@@ -5,7 +5,7 @@
 # end
 
 Rails.application.routes.draw do
-  root "scrunchies#index"
+  root "scrunchies#homepage"
   resources :scrunchies 
   resources :moods
   resources :products 

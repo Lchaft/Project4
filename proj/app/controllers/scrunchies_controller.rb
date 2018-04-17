@@ -18,7 +18,7 @@ class ScrunchiesController < ApplicationController
 
     def create 
     @scrunchie = Scrunchie.create 
-    redirect_to scrunchie_path(@scrunchie)
+    redirect_to scrunchy_path(@scrunchie_id)
     end 
 
     def update 
