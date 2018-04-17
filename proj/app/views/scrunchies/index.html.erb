@@ -3,7 +3,9 @@
   <h2>Add New Scrunchie Post <%= link_to "(+)", new_scrunchy_path %></h2>
 
   <% @scrunchies.each do |scrunchie| %>
-      <h3><%= link_to scrunchie.title, scrunchy_path(scrunchie) %>  <%= link_to "(edit)", edit_scrunchy_path(scrunchie) %></h3> 
+      <h3>
+      
+      <%= link_to scrunchie.title, scrunchy_path(scrunchie) %>  <%= link_to "(edit)", edit_scrunchy_path(scrunchie) %></h3> 
       <p><%= link_to 'Delete Scrunchie', scrunchy_path(scrunchie),
               method: :delete,
               data: { confirm: 'You dare delete this scrunchie?' } %></p>
