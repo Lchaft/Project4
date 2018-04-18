@@ -1,12 +1,13 @@
-<h2>Scrunchie How Tos</h2>
+<div class="jumbotron">
+<h2 class= "display-4"><h2>Scrunchie How Tos</h2><%= link_to "(+)", new_mood_path, class: 'btn btn-success' %></h2>
+</div>
 
-  <h2>Add New Scrunchie How To Post <%= link_to "(+)", new_mood_path %></h2>
 
   <% @moods.each do |mood| %>
       <h3>
       
       <%= link_to mood.title, mood_path(mood) %>  <%= link_to "(edit)", edit_mood_path(mood) %></h3> 
-      <p><%= link_to 'Delete Scrunchie How To', mood_path(mood),
+      <p><%= link_to 'Delete Scrunchie How To', mood_path(mood), class: 'btn btn-primary btn-xs',
               method: :delete,
               data: { confirm: 'You dare delete this scrunchie how to post?' } %></p>
   <% end %>

@@ -1,12 +1,15 @@
-<h2>Scrunchie Articles</h2>
+<div class="jumbotron">
+<h2 class= "display-4">Scrunchie Articles</h2>
+</div>
 
-  <h2>Add New Scrunchie Post <%= link_to "(+)", new_scrunchy_path %></h2>
+
+  <h2>Add New Scrunchie Post <%= link_to "(+)", new_scrunchy_path, class: 'btn btn-success' %></h2>
 
   <% @scrunchies.each do |scrunchie| %>
       <h3>
       
       <%= link_to scrunchie.title, scrunchy_path(scrunchie) %>  <%= link_to "(edit)", edit_scrunchy_path(scrunchie) %></h3> 
-      <p><%= link_to 'Delete Scrunchie', scrunchy_path(scrunchie),
+      <p><%= link_to 'Delete Scrunchie', scrunchy_path(scrunchie), class: 'btn btn-primary btn-xs',
               method: :delete,
               data: { confirm: 'You dare delete this scrunchie?' } %></p>
   <% end %>

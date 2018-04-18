@@ -18,7 +18,8 @@ class ScrunchiesController < ApplicationController
 
     def create 
     @scrunchie = Scrunchie.create!(scrunchie_params) 
-    redirect_to @scrunchie
+    redirect_to scrunchies_path
+    # redirect_to @scrunchie
     # redirect_to scrunchy_path(@scrunchie_id)
     end 
 
@@ -33,10 +34,10 @@ class ScrunchiesController < ApplicationController
     end 
 end 
 
-    def destory 
+    def destroy 
     @scrunchie = Scrunchie.find(params[:id])
-    @scrunchie.destory
-    redirect_to scrunchy_path
+    @scrunchie.destroy
+    redirect_to scrunchies_path
     end 
 
     private 
