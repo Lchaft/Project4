@@ -18,18 +18,20 @@ class MoodsController < ApplicationController
 
     def create 
       @mood = Mood.create
-      redirect_to mood_path(@mood)
+      redirect_to moods_path
+      # (@mood)
     end 
 
     def update 
       @mood = Mood.find(params[:id])
-      redirect_to mood_path(@mood)
+      redirect_to moods_path
+      # (@mood)
     end 
 
     def destroy
       @mood = Mood.find(params[:id])
       @mood.destroy
-      redirect_to mood_path
+      redirect_to moods_path
     end 
   end
 

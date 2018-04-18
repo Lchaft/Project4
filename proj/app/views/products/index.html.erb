@@ -1,5 +1,5 @@
-<div class="jumbotron">
-<h2 class= "display-4">Buy More Scrunchies <%= link_to "(+)", new_product_path, class: 'btn btn-success' %></h2>
+<div class="jumbotron" style="background-color:#FAE0EE;>
+<h2 class= "display-4">Buy More Scrunchies <%= link_to "(+)", new_product_path, class: 'btn btn-pink' %></h2>
 </div>
 
 
@@ -8,7 +8,7 @@
       <h3>
       
       <%= link_to product.brand, product_path(product) %>  <%= link_to "(edit)", edit_product_path(product) %></h3> 
-      <p><%= link_to 'Delete Scrunchie', product_path(product), class: 'btn btn-primary btn-xs',
+      <p><%= link_to 'Delete Scrunchie', product_path(product), class: 'btn btn-btn-xs',
               method: :delete,
               data: { confirm: 'You dare delete this scrunchie?' } %></p>
   <% end %>
