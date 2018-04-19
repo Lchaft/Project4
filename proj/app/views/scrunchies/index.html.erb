@@ -1,13 +1,13 @@
 <div class="jumbotron" style="background-color:#FAE0EE;>
-<h2 class= "display-4">New Scrunchie Post <%= link_to "(+)", new_scrunchy_path, class: 'btn btn-pink' %></h2>
+<h2 class= "display-4">New Scrunchie Post <%= link_to "(+)", new_scrunchy_path, class: 'link-to-new-color' %></h2>
 </div>
 
 
   <% @scrunchies.each do |scrunchie| %>
       <h3>
       
-      <%= link_to scrunchie.title, scrunchy_path(scrunchie) %>  <%= link_to "(edit)", edit_scrunchy_path(scrunchie) %></h3> 
-      <p><%= link_to 'Delete Scrunchie', scrunchy_path(scrunchie), class: 'btn btn-btn-xs',
+      <%= link_to scrunchie.title, scrunchy_path(scrunchie), class: 'link-to-text-color'  %>  </h3> 
+      <p><%= link_to 'Delete Scrunchie', scrunchy_path(scrunchie), class: 'link-to-delete-color',
               method: :delete,
               data: { confirm: 'You dare delete this scrunchie?' } %></p>
   <% end %>
