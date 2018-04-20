@@ -33,6 +33,12 @@ scrunchie = Scrunchie.create(title: "Scrunchies get rebranded as 'hair clouds' b
 scrunchie = Scrunchie.create(title: "Scrunchies Deserve Their 2018 Revival", website_url: "https://www.racked.com/2018/1/16/16896708/scrunchies-trend-comeback",date: "JANUARY 16, 2018",)
 scrunchie = Scrunchie.create(title: "The scrunchie makes a comeback, some priced at near $200", website_url: "http://www.latimes.com/fashion/la-ig-wwd-scrunchie-fashion-20180103-htmlstory.html", date: "JANUARY 3, 2018",)
 scrunchie = Scrunchie.create(title: "Hair scrunchies are back, and we're not even mad about it", website_url: "https://www.today.com/style/hair-scrunchies-are-back-we-re-not-even-mad-about-t114146",date: "JULY 21, 2017",)
+scrunchie = Scrunchie.create(title: "Ruth Bader Ginsburg's 'Best' Scrunchies Are From Switzerland", website_url: "https://www.hollywoodreporter.com/news/ruth-bader-ginsburgs-scrunchie-collection-best-scrunchies-zurich-1096218",date: "March 21, 2018",)
+scrunchie = Scrunchie.create(title: "Ruth Bader Ginsburg is bringing scrunchies back", website_url: "https://www.cnn.com/2018/03/21/politics/ruth-bader-ginsburg-scrunchies/index.html", date: "March 21, 2018",)
+scrunchie = Scrunchie.create(title: "Photographic Proof Ruth Bader Ginsburg Has Always Loved Scrunchies", website_url: "https://www.refinery29.com/2018/03/194314/ruth-bader-ginsburg-scrunchie-photos?bucketed=true&bucketing_referrer=https%3A%2F%2Fwww.google.com%2F", date: "March 21, 2017",)
+
+
+
 
 product = Product.create(website_url: "https://www.freepeople.com/shop/silk-brocade-scrunchie/?cm_mmc=cj-_-affiliates-_-Clique%20Media%2C%20Inc.%20%20%7C%20Who%20What%20Wear-_-Product%20Catalog&color=001&quantity=1&size=One%20Size&type=REGULAR&utm_campaign=Clique%20Media%2C%20Inc.%20%20%7C%20Who%20What%20Wear&utm_content=Product%20Catalog&utm_medium=affiliates&utm_source=cj_us&utm_term=2299623", cost: "$6",brand: "Free People",)
 product = Product.create(website_url: "http://us.topshop.com/en/tsus/product/mini-glitter-hair-scrunchie-6764182?geoip=noredirect&&istCompanyId=da794a11-99cb-4206-8e52-61037452aeeb&istItemId=xllawqitwl&istBid=t&geoip=noredirect&network=linkshare&utm_source=linkshare&utm_medium=affiliate&utm_campaign=US_1921634&utm_content=%3CLSNLNKTYPENAME%3E&siteID=25ZRSXYPVYg-gUEBXvF7o7nEBVSMUyxBDQ&cmpid=aff_lsus_25ZRSXYPVYg_15&_$ja=tsid:21416|prd:25ZRSXYPVYg",cost: "$2",brand: "Top Shop",)

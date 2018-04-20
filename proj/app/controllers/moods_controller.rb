@@ -17,22 +17,29 @@ class MoodsController < ApplicationController
     end 
 
     def create 
-      @mood = Mood.create
+      @mood = Mood.create!(mood_params)
       redirect_to moods_path
-      # (@mood)
     end 
+
 
     def update 
       @mood = Mood.find(params[:id])
+      @mood.update(mood_params)
       redirect_to moods_path
-      # (@mood)
     end 
+
 
     def destroy
       @mood = Mood.find(params[:id])
       @mood.destroy
       redirect_to moods_path
     end 
+
+    private 
+    def mood_params 
+        params.require(:mood).permit(:title, :website_url)
+    end 
+
   end
 
 

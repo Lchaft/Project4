@@ -1,5 +1,5 @@
 <div class ="btn btn"> 
-<h2><a href="<%= @product.website_url %>"><%= @product.brand %> </a> <a href="/products/<%= @product.id %>/edit">(edit)</a> </h2>
+<h2><a class='link-to-text-color' href="<%= @product.website_url %>"><%= @product.brand %> </a> <a class='link-to-delete-color' href="/products/<%= @product.id %>/edit">(edit)</a> </h2>
 
 <%=@product.cost %>
 
